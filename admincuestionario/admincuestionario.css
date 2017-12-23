@@ -1,0 +1,24 @@
+/*table,tr,td{
+	border:2px solid black;
+}
+ a.cuest:link {
+    color: black;
+}
+a.cuest:visited {
+    color: black;
+}
+a.cuest:hover {
+    color: orange;
+}
+a.cuest:active {
+    color: orange;
+}
+a.pabajo{
+	visibility:hidden;
+}
+*/
+
+.oculto{
+	display:none;
+}
+
