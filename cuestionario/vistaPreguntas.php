@@ -33,7 +33,7 @@ class vistaPreguntas{
 						r=document.getElementById("rfinal"+i).value;
 					if(r!="r1"){
 						document.getElementById(r+i).style.backgroundColor = "red";
-						document.getElementById("img"+i).src="localhost/cuestionario/imagenes/error.png";
+						document.getElementById("img"+i).src="../cuestionario/cuestionario/imagenes/error.png";
 						aciertos--;
 					}
 					document.getElementById("r1"+i).style.backgroundColor = "green";
@@ -71,14 +71,13 @@ class vistaPreguntas{
 			</br>
 			<div class="numeroPregunta" style="margin:10px auto;background:#EAC05E;border:2px solid orange;border-radius:20px; width:20px;padding:10px;font-weight: bold;"><?php echo $j+1; ?></div>
 			<h4><?php echo $preguntas[$j]->enunciado; ?></h4></br>
-					<?php 
-						$indices=array("r1","r2","r3");
-						for($i=0;$i<3;$i++){
-							$n=rand(0,count($indices)-1);
-						print_r($indices[$n]);
+				<?php 
+				$indices = array("r1","r2","r3");
+				for($i=0;$i<3;$i++){
+					$n=rand(0,count($indices)-1);
+					$cont=$indices[$n];
 					?>
-					
-					<div id=<?php echo "'".$indices[$n].($j+1)."'" ?> style="margin:0 auto;background-color:white; width:300px;  border:2px solid black;border-radius:15px; padding:10px;text-align:center;cursor:pointer;" onclick="respuesta(<?php echo "'".$indices[$n]."'" ?> ,<?php echo $j+1 ?> )"> <?php echo $preguntas[$j]->r1 ?> </div></br>
+					<div id=<?php echo "'".$indices[$n].($j+1)."'" ?> style="margin:0 auto;background-color:white; width:300px;  border:2px solid black;border-radius:15px; padding:10px;text-align:center;cursor:pointer;" onclick="respuesta(<?php echo "'".$indices[$n]."'" ?> ,<?php echo $j+1 ?> )"> <?php echo $preguntas[$j]->$cont; ?> </div></br>
 					<?php
 					unset($indices[$n]);
 					$indices=array_values($indices);
@@ -96,7 +95,7 @@ class vistaPreguntas{
 				</div>
 				<?php }
 				?>
-				<form id="form" hidden name="form"  method="post" action="<?php echo "../cuestionario/cuestionario.php"?>">
+				<form id="form" hidden name="form"  method="post" action="<?php echo "../cuestionario/index.php/"?>">
 					<input id="rfinal1" type="text" name="rfinal" />
 					<input id="rfinal2" type="text" name="rfinal" />
 					<input id="rfinal3" type="text" name="rfinal" />
@@ -120,19 +119,19 @@ class vistaPreguntas{
 				<table style="width:100%;">
 					<tr>
 						<td><a class="cuest" href="#p1">1.<img id="img1" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p2">2.<img id="img2" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p3">3.<img id="img3" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p4">4.<img id="img4" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p5">5.<img id="img5" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p6">6.<img id="img6" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p7">7.<img id="img7" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p8">8.<img id="img8" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p9">9.<img id="img9" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
-						<td><a class="cuest" href="#p10">10.<img id="img10" src="localhost/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p2">2.<img id="img2" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p3">3.<img id="img3" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p4">4.<img id="img4" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p5">5.<img id="img5" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p6">6.<img id="img6" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p7">7.<img id="img7" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p8">8.<img id="img8" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p9">9.<img id="img9" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
+						<td><a class="cuest" href="#p10">10.<img id="img10" src="../cuestionario/cuestionario/imagenes/acierto.png" alt="Mountain View"></a></td>
 						
 					</tr>
 				</table>
-				<a href="../cuestionario/cuestionario.php">Volver a empezar</a>
+				<a href="../cuestionario/index.php">Volver a empezar</a>
 				</div>
 				
 </div>
