@@ -7,7 +7,7 @@
             $this->dbAbstract=new dbAbstract();
         }
         public function crearConexion(){
-            $this->dbAbstract->crearConexion("localhost", "iescelia", "Icv2012", "cv_wordpress");
+            $this->dbAbstract->crearConexion("localhost", "cuestionario", "cuestionario", "cuestionario");
         }
 		public function getIdPreguntas($dificultad){
             $this->crearConexion();

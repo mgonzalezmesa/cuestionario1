@@ -15,7 +15,7 @@ class vistaPreguntas{
 					document.getElementById("r2"+n).style.backgroundColor = "white";
 					document.getElementById("r3"+n).style.backgroundColor = "white";
 					document.getElementById("rfinal"+n).value=r;
-					document.getElementById(r+""+n).style.backgroundColor = "orange";
+					document.getElementById(r+""+n).style.backgroundColor = "#2c92c6";
 					comprobar[n-1]=1;
 				}
 			}
@@ -69,25 +69,76 @@ class vistaPreguntas{
 			?>
 			<div id=<?php echo "'"."p".($j+1)."'" ?> style="background: #FFFFFF;width: 700px;margin: 0 auto 100px;padding:15px 45px;text-align: center;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);">	
 			</br>
-			<div class="numeroPregunta" style="margin:10px auto;background:#EAC05E;border:2px solid orange;border-radius:20px; width:20px;padding:10px;font-weight: bold;"><?php echo $j+1; ?></div>
-			<h4><?php echo $preguntas[$j]->enunciado; ?></h4></br>
-				<?php 
-				$indices = array("r1","r2","r3");
-				for($i=0;$i<3;$i++){
-					$n=rand(0,count($indices)-1);
-					$cont=$indices[$n];
-					?>
-					<div id=<?php echo "'".$indices[$n].($j+1)."'" ?> style="margin:0 auto;background-color:white; width:300px;  border:2px solid black;border-radius:15px; padding:10px;text-align:center;cursor:pointer;" onclick="respuesta(<?php echo "'".$indices[$n]."'" ?> ,<?php echo $j+1 ?> )"> <?php echo $preguntas[$j]->$cont; ?> </div></br>
-					<?php
-					unset($indices[$n]);
-					$indices=array_values($indices);
-				}
-				
-				?>
-				</br>
-					<?php if($preguntas[$j]->foto!="sin.jpg"){?>
-						<img src=<?php echo "../cuestionario/cuestionario/imagenes/".$preguntas[$j]->foto ?> width="300px" alt="imagen" />
+			<?php if($preguntas[$j]->foto!="sin.jpg"){?>
+						<div id="imagen" style="width:45%;float:left;height:375px;">
+							<img src=<?php echo "../cuestionario/cuestionario/imagenes/".$preguntas[$j]->foto ?> width="300px" alt="imagen" style="margin-top:60px;" />
+						</div>
 					<?php } ?>
+			 <div id="enunciado" style="width:55%;float:left;height:375px;">
+			 	<h4><?php echo $preguntas[$j]->enunciado; ?></h4></br>
+					<?php 
+					$indices = array("r1","r2","r3");
+					for($i=0;$i<3;$i++){
+						$n=rand(0,count($indices)-1);
+						$cont=$indices[$n];
+						?>
+						<div id=<?php echo "'".$indices[$n].($j+1)."'" ?> style="margin:0 auto;background-color:white; width:300px;  border:2px solid black;border-radius:15px; padding:10px;text-align:center;cursor:pointer;" onclick="respuesta(<?php echo "'".$indices[$n]."'" ?> ,<?php echo $j+1 ?> )"> <?php echo $preguntas[$j]->$cont; ?> </div></br>
+						<?php
+						unset($indices[$n]);
+						$indices=array_values($indices);
+					}
+					$i=0;
+					?>
+			 </div>
+			 <div id="numerosP" style="width:100%;float:left;height:50px;padding:0px;">
+				
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+1; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+2; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+3; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+4; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+5; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+6; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+7; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+8; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+9; ?>
+
+		 		</div>
+		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
+		 			<?php echo $i+10; ?>
+
+		 		</div>
+
+				
+			</div>
+		 	<div style="clear:both;"></div>
+				</br>
+				
+					
 				</br>
 				<a class="pabajo" href="#correccion">Ir a la corrección</a>
 				
@@ -111,7 +162,7 @@ class vistaPreguntas{
 				</form>
 				<div id="corregir" style=" margin:0 auto; background-color:white; width:300px;  border:2px solid black; border-radius:15px; padding:10px; text-align:center; cursor:pointer;" onclick="corregir()"> Corregir 
 				</div>
-				<div id="correccion" style="position: relative; left:20%;background: #FFFFFF;width: 700px;margin: 0 auto 100px;padding: 45px;text-align: center;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); display:none;">	
+				<div id="correccion" style="background: #FFFFFF;width: 700px;margin: 0 auto 100px;padding: 45px;text-align: center;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); display:none;">	
 				<h3>Resultados del cuestionario:</h3></br>
 				Ha conseguido <span id="aciertos"></span> aciertos.</br>
 				<span id="mensaje"></span></br> 
@@ -139,4 +190,3 @@ class vistaPreguntas{
             <?php
         }
 	}
-
