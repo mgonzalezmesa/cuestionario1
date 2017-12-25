@@ -93,43 +93,43 @@ class vistaPreguntas{
 			 <div id="numerosP" style="width:100%;float:left;height:50px;padding:0px;">
 				
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+1; ?>
+		 			<?php echo "<a class='cuest' href='#p1'> 1 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+2; ?>
+		 			<?php echo "<a class='cuest' href='#p2'> 2 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+3; ?>
+		 			<?php echo "<a class='cuest' href='#p3'> 3 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+4; ?>
+		 			<?php echo "<a class='cuest' href='#p4'> 4 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+5; ?>
+		 			<?php echo "<a class='cuest' href='#p5'> 5 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+6; ?>
+		 			<?php echo "<a class='cuest' href='#p6'> 6 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+7; ?>
+		 			<?php echo "<a class='cuest' href='#p7'> 7 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+8; ?>
+		 			<?php echo "<a class='cuest' href='#p8'> 8 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+9; ?>
+		 			<?php echo "<a class='cuest' href='#p9'> 9 </a>"?>
 
 		 		</div>
 		 		<div class="numeroPregunta" style="float:left;margin:10px 10px;background:#d3d6d6;border:2px solid #9ba0a2;border-radius:10px; width:20px;padding:12px;font-weight: bold;">
-		 			<?php echo $i+10; ?>
+		 			<?php echo "<a class='cuest' href='#p10'> 10 </a>"?>
 
 		 		</div>
 
