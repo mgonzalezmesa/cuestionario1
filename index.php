@@ -18,7 +18,7 @@
 							<div class="article_text">
 								<h2><?php //the_title(); ?></h2>
 								<!-- INICIO PLANTILLA -->
-								<link href="../cuestionario/cuestionario/cuestionario.css" rel="stylesheet" type="text/css"/>
+								<link href="cuestionario/cuestionario.css" rel="stylesheet" type="text/css"/>
 									         <?php
 												if (isset($_REQUEST['empezar'])) {
 													$preguntas=array();
