@@ -1,4 +1,4 @@
-table,tr,td{
+/*table,tr,td{
 	border:2px solid black;
 }
  a.cuest:link {
@@ -15,4 +15,94 @@ a.cuest:active {
 }
 a.pabajo{
 	visibility:hidden;
+}*/
+
+#container-cuestionario{
+	width: 100%; 
+	padding: 8% 0 0; 
+	margin: 0 auto;
+	background:#ffffff;
+	background:url('fondo_1.jpg');
+		/*background-repeat: no-repeat;*/
+}
+#enunciado-cuestionario{
+	width: 30%;
+	padding: 25px;
+	background-color:#044891; 
+	float:left;
+	margin-top:70px; 
+	margin-left:125px;
+	max-width:600px; 
+	border:1px solid white;
+	font:white;
+}
+#enunciado-cuestionario p{
+	color:white;
+	font-size:18px;
+}
+#login-form{
+	float: left;
+    width: 30%;
+    background: #044891;
+    margin-top: -20px;
+    margin-left: 200px;
+    max-width: 360px;
+    margin-bottom: 30px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.titulo-login{
+	margin-top: -25px;
+    padding: 5px;
+    text-align: center;
+    color: 	white;
+}
+.escudo-login{
+	/*background:url('escudo.png');
+	background-repeat: no-repeat;
+    background-size: 60% 100%;*/
+    /* background-position: center; */
+    width: 125px;
+    /* height: 95px; */
+    margin-top: -97px;
+    margin-left: 32%;
+    border-radius: 50%;
+    background: #044891;
+}
+.escudo-login img{
+	width: 64px;
+    height: 80px;
+    padding: 20px;
+}
+.caja {
+   margin:20px auto 40px auto;	
+   border:1px solid #d9d9d9;
+   height:30px;
+   overflow: hidden;
+   width: 230px;
+   position:relative;
+}
+select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 30px;
+   padding: 5px;
+   width: 250px;
+}
+select:focus{ outline: none;}
+
+.caja::after{
+	content:"\025be";
+	display:table-cell;
+	padding-top:7px;
+	text-align:center;
+	width:30px;
+	height:30px;
+	background-color:#d9d9d9;
+	position:absolute;
+	top:0;
+	right:0px;	
+	pointer-events: none;
 }
